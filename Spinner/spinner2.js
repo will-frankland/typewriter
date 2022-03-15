@@ -5,11 +5,11 @@
 // setTimeout inside loop (+=) current delay + 200ms
 
 let delay = 0;
-let symbol = ["|", "/", "-", "\\"];
-for (elem of symbol) {
-  setTimeout(() => 
-    process.stdout.write(elem), delay)
-  delay += 200
+let symbol = ['|', '/', '-', '\\'];
+for (const elem of symbol) {
+  delay += 500
+  setTimeout(() => {
+    process.stdout.write(`\r${elem}   `)}, delay);
 };
 
 // setTimeout(() => {
